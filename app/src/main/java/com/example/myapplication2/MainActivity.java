@@ -81,11 +81,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(questions[questionIndex].isAnswerTrue()) {
-                    Toast.makeText(MainActivity.this, R.string.correct, Toast.LENGTH_SHORT).show();
-                    resValue = getResources().getString(R.string.correct);
-                }else {
                     Toast.makeText(MainActivity.this, R.string.incorrect, Toast.LENGTH_SHORT).show();
                     resValue = getResources().getString(R.string.incorrect);
+                }else {
+                    Toast.makeText(MainActivity.this, R.string.correct, Toast.LENGTH_SHORT).show();
+                    resValue = getResources().getString(R.string.correct);
                 }
 
                 colAnswer.add(questionIndex, textView.getText().toString()+" "+
